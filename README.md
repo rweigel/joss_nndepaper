@@ -1,2 +1,2 @@
 # joss_nndepaper
-Paper describing NNDE for the Journal of Open Source Software
+Paper describing `nnde` for the Journal of Open Source Software
