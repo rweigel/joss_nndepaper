@@ -19,7 +19,9 @@ Neural networks provide a novel approach for solving the differential equations 
 
 # Statement of need
 
-The current standard methods for solving differential equations (Finite Element Method) and Finite Difference Method (FDM)) have long been used for magnetohydrodynamical models. However, these methods can be complicated to parallelize, and can involve large storage requirements for model outputs. A neural network approach provides straightforward parallelization, due to the independent characteristics of the computational nodes in each network layer. Additionally, the trained network solution is more compact than a FDM or FEM solution, since only the network weights and biases are required. Additionally, the neural network solution is mesh-free, and does not require recomputation or interpolation to retrieve the solution at a non-grid point, as is the case with FDM or FEM. Once the network is trained, computing a solution is simply a matter of a series of simple matrix multiplications, one per network layer. The trained solution is essentially an expansion of the analytical solution in a series of arbitrary differentiable basis functions, and therefore the trained solution is also differentiable, which is particularly useful when computing gradients and fluxes in models of physical phenomena.
+The current standard methods for solving differential equations (Finite Element Method) and Finite Difference Method (FDM)) have long been used for magnetohydrodynamical models. However, these methods can be complicated to parallelize and can involve large storage requirements for model outputs. A neural network approach provides straightforward parallelization, due to the independent characteristics of the computational nodes in each network layer. Additionally, the trained network solution is more compact than an FDM or FEM solution, since only the network weights and biases are required. Additionally, the neural network solution is mesh-free and does not require recomputation or interpolation to retrieve the solution at a non-grid point, as is the case with FDM or FEM. Once the network is trained, computing a solution is simply a matter of a series of simple matrix multiplications, one per network layer. The trained solution is essentially an expansion of the analytical solution in a series of arbitrary differentiable basis functions, and therefore the trained solution is also differentiable, which is particularly useful when computing gradients and fluxes in models of physical phenomena.
+
+The `nnde` package addresses a specific need - it provides a complete implementation of a standard algorithm for solving differential equations with neural networks - the trial function approach. This code can be used as a starting point for implementing other algorithms to solve ODEs and PDEs with neural networks. The code is structured in a simple fashion, with a relatively class hierarchy, and extensive internal comments to assist the user in understanding the approach. This code emphasizes readability and explicit code structure over speed, and many opportunities for code optimization remain.
 
 # Description
 
@@ -54,5 +56,9 @@ and referenced from text using \autoref{fig:example}.
 # Software repository
 
 The `nnde` software is available on GitHub at https://github.com/elwinter/nnde.
+
+A collection of example python scripts using `nnde`  is available on GitHub at https://github.com/elwinter/nnde_demos.
+
+A collection of example Jupyter notebooks using `nnde` is available on GitHub at https://github.com/elwinter/nnde_notebooks.
 
 # References
