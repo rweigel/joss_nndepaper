@@ -50,7 +50,7 @@ This problem has an analytical solution:
 
 The `nnde` package was used to create a neural network with a single hidden layer and 10 hidden nodes, and trained to solve this problem. The error in the trained solution is shown in \autoref{fig:diff2d_error}
 
-![Error in solution of 2-D diffusion problem using `nnde` with 10 nodes.\label{fig:diff2d_error}](figures/diff2d_error.png)
+![Error in solution of 2-D diffusion problem using `nnde` with 10 nodes.\label{fig:diff2d_error}](figures/diff2d_error_heatmaps.png)
 and referenced from text using \autoref{fig:example}.
 
 # Software repository
