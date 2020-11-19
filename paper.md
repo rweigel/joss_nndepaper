@@ -57,4 +57,8 @@ and referenced from text using \autoref{fig:example}.
 
 The `nnde` software is available on GitHub at https://github.com/elwinter/nnde.
 
+A collection of example python scripts using `nnde`  is available on GitHub at https://github.com/elwinter/nnde_demos.
+
+A collection of example Jupyter notebooks using `nnde` is available on GitHub at https://github.com/elwinter/nnde_notebooks.
+
 # References
