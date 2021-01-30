@@ -9,23 +9,24 @@ authors:
     orcid: 0000-0001-5226-2107
     affiliation: George Mason University
   - name: Bob Weigel
+    orcid: 0000-0002-9521-5228
     affiliation: George Mason University
 date: 29 October 2020
 bibliography: paper.bib
 
 # Summary
 
-Neural networks have been shown to have the ability to solve differential equations [Add references to review article or textbook]. The `nnde` software provides a pure-Python package for the solution of ordinary and partial differential equations of up to second order. We present results of sample runs showing the effectiveness of the software in solving the two-dimensional diffusion problem.
+Neural networks have been shown to have the ability to solve differential equations [Add references to review article or textbook]. `nnde` is a pure-Python package for the solution of ordinary and partial differential equations of up to second order. We present results of sample runs showing the effectiveness of the software in solving the two-dimensional diffusion problem.
 
 # Statement of need
 
-The most commonly used methods for solving differential equations are the Finite Element Method (FEM) and Finite Difference Method (FDM) have long been used for solving partial differential equations. However, these methods can be complicated to parallelize and can involve large storage requirements for model outputs. The neural network method provides straightforward parallelization due to the independent characteristics of the computational nodes in each network layer. Additionally, the trained network solution is more compact than an FDM or FEM solution because the storage of only the network weights and biases are required. Additionally, the neural network solution is mesh-free and does not require interpolation to retrieve the solution at a non-grid point, as is the case with FDM or FEM. Once the network is trained, computing a solution requires only a series of simple matrix multiplications, one per network layer. The trained solution is a sum of arbitrary differentiable basis functions, and therefore the trained solution is also differentiable, which is particularly useful when computing derived quantities such as gradients and fluxes.
+The most commonly used methods for solving differential equations are the Finite Element Method (FEM) and Finite Difference Method (FDM) have long been used for solving partial differential equations. However, these methods can be difficult to parallelize and may have large storage requirements for model outputs. The neural network method is straightforward to parallelize due to the independent characteristics of the computational nodes in each network layer. Additionally, the trained network solution is more compact than an FDM or FEM solution because storage of only the network weights and biases are required. Additionally, the neural network solution is mesh-free and does not require interpolation to obtain values at a non-grid point, as is the case with FDM or FEM. Once the network is trained, computing a solution requires only a series of simple matrix multiplications, one per network layer. The trained solution is a sum of arbitrary differentiable basis functions, and therefore the trained solution is also differentiable, which is particularly useful when computing derived quantities such as gradients and fluxes.
 
 `Need to describe the need for this software package. Does anything equivalent exist? If so, what is the advantage of this package?`
 
 # Description
 
-`nnde` is a pure-Python package that implements a version of the trial function algorithm described by `@Lagaris:1998`. This software also implements a novel `"novel" is so hackneyed that I read "novel" as meaning "not novel"` algorithm for incorporating the boundary conditions of the problem directly into the neural network solution.
+`nnde` implements a version of the trial function algorithm described by `@Lagaris:1998`. This software also implements a novel `"novel" is so hackneyed that I read "novel" as meaning "not novel"` algorithm for incorporating the boundary conditions of the problem directly into the neural network solution.
 
 This software was developed as part of a project with the objective of demonstrating that the coupled partial differential equations of magnetohydrodynamics (MHD) `reference` can be solved using the neural network method. As part of this ongoing project, we implemented many of the test problems in the literature and the result is a package can be used for any ordinary or partial differential equations of up to second order. `nnde` was initially developed entirely in Python to understand the workings of the neural network algorithm. Planned future work will incorporate the high-performance TensorFlow library to improve the speed of solutions.
 
